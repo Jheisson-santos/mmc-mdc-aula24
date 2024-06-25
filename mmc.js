@@ -22,4 +22,7 @@ process.stdin.once('data', function(data){
     console.log(`${mmc}`);
     process.exit()
     })
+
+    // foda
+    
 })
