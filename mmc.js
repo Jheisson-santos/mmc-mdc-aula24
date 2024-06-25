@@ -1,5 +1,4 @@
-let num1 
-let num2
+let num1, num2, mdc 
 console.log('Digite o primero numero');
 process.stdin.once('data', function(data){
     let inp = Number(data)
@@ -17,12 +16,21 @@ process.stdin.once('data', function(data){
                 mmc = numMax
                     break;
             }
-        numMax++
-    }
-    console.log(`${mmc}`);
+            numMax++
+        }
+        console.log(`MMC: ${mmc}`);
+        let menor = Math.min(num1, num2)
+        for(let i = menor; i > 0; i--) {
+            if(num1 % i == 0 && num2 % i ==0) {
+                console.log("MDC: " + i)
+                break;
+            }
+        }
     process.exit()
     })
 
     // foda
-    
+
+
+
 })
